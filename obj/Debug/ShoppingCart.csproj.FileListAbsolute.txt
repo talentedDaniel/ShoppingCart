@@ -1,0 +1,36 @@
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\ApplicationInsights.config
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\roslyn\csc.exe
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\roslyn\System.Collections.Immutable.dll
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\roslyn\vbc.exe
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\roslyn\VBCSCompiler.exe
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\roslyn\VBCSCompiler.exe.config
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\ShoppingCart.dll.config
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\ShoppingCart.dll
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\ShoppingCart.pdb
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\Microsoft.AI.Web.dll
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\Microsoft.AI.WindowsServer.dll
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\Microsoft.ApplicationInsights.dll
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\Microsoft.AI.Web.xml
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\Microsoft.AI.WindowsServer.xml
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\Microsoft.ApplicationInsights.xml
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\obj\Debug\ShoppingCart.csprojResolveAssemblyReference.cache
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\obj\Debug\ShoppingCart.dll
+c:\users\daniel\documents\visual studio 2015\Projects\ShoppingCart\ShoppingCart\obj\Debug\ShoppingCart.pdb
+C:\Users\Daniel\Desktop\ShoppingCart\ShoppingCart\obj\Debug\ShoppingCart.csprojResolveAssemblyReference.cache
+C:\Users\Daniel\Desktop\ShoppingCart\ShoppingCart\obj\Debug\ShoppingCart.dll
+C:\Users\Daniel\Desktop\ShoppingCart\ShoppingCart\obj\Debug\ShoppingCart.pdb

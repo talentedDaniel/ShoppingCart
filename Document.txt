@@ -1,0 +1,17 @@
+﻿Penn,
+
+As I mentioned before, I am not able to finish this project in time so I will descrbe the project at this moment and send you site url and souce code when I finish it.
+
+Generally, the project utilizes 3 layers: 
+	Layer1: Retriving data from user via UI;
+	Layer2: Encapsulating data into different classes like Shopping Cart, Product, Category, Customer, Guest etc.
+	Layer3: Then Layer2 calls Db Connection to manage the SQL database for adding, deleting, updating or searching. (Sql Procedure is used here to replace creating slq command programmatically)
+
+	When Layer3 is finished running, project will generate script message to inform the user of the status.
+	When Default page, Add New Product page loaded, we need ask database for related information layer by layer which is similiar to former operation.
+
+(Not finish)
+Similarly, we are able to create customer instance in database which corresponds to register. Admin log in is created by default stored in Web.config
+We have another 4 tables Customer, Customer_Product, Guest, Guest_Product, Customer and Guest are used for storing infomration of human. Customer_Product and Guest_Product are used for storing
+mapping relationship between prodcut and customer, product and guest. Whenever, customer/guest place an order, we will have a record in the database.
+If I am able to configure the project with an online SMTP server, we can send email to the customer if the email address is valid.

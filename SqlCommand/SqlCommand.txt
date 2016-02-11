@@ -1,0 +1,102 @@
+﻿Create table Products
+(
+ProductID int primary key identity (1,1),
+Name varchar(1000),
+Description varchar(5000),
+Price varchar(50),
+ImageUrl varchar(500),
+Ingredient varchar(500),
+CategoryId int
+)
+
+Create table Category
+(
+CategoryID int primary key identity(1,1),
+CategoryName varchar(500)
+)
+
+//Using SQL Procdure to replace SLQ clause in C# code.
+
+SQL Procedure
+-- values below.
+--
+-- This block of comments will not be included in
+-- the definition of the procedure.
+-- ================================================
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE [dbo].[SP_GetAllCategories]
+
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	BEGIN TRY
+		select * from Category
+	END TRY
+	BEGIN CATCH
+		PRINT('Error occurred')
+	END CATCH
+END
+GO
+
+
+
+-- ================================================
+-- Template generated from Template Explorer using:
+-- Create Procedure (New Menu).SQL
+--
+-- Use the Specify Values for Template Parameters 
+-- command (Ctrl-Shift-M) to fill in the parameter 
+-- values below.
+--
+-- This block of comments will not be included in
+-- the definition of the procedure.
+-- ================================================
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE [dbo].[AddNewProduct]
+(
+@ProductName varchar(500),
+@ProductPrice int,
+@ProductImage varchar(500),
+@ProductDescription varchar(1000),
+@CategoryId int
+)
+
+AS
+BEGIN
+
+	BEGIN TRY
+		Insert into Products
+		values
+		(
+		@ProductName,
+		@ProductDescription,
+		@ProductPrice,
+		@ProductImage,
+		@CategoryId
+		)
+	END TRY
+	BEGIN CATCH
+	 PRINT('Error occurred')
+	END CATCH
+END
+GO
+
+
+
