@@ -112,6 +112,8 @@
     <Content Include="Admin\AddEditCategory.aspx" />
     <Content Include="Admin\AddNewProduct.aspx" />
     <Content Include="Admin\Login.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="ShoppingCart.aspx" />
     <Content Include="SqlCommand\SqlCommand.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -152,8 +154,23 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Logic\Member.cs" />
     <Compile Include="Logic\ShoppingCart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingCart.aspx.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShoppingCart.aspx.designer.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />

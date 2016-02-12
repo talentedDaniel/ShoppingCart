@@ -19,7 +19,7 @@ namespace ShoppingCart.Admin
 
         private void GetCategory()
         {
-            ShoppingCart shoppingCart = new ShoppingCart();
+            Logic.ShoppingCart shoppingCart = new Logic.ShoppingCart();
             System.Data.DataTable dataTable = shoppingCart.GetCategory();
             if (dataTable.Rows.Count > 0)
             {
@@ -50,16 +50,16 @@ namespace ShoppingCart.Admin
             {
                 SaveProductPhoto();
 
-                ShoppingCart shoppingCart = new ShoppingCart()
+                Logic.ShoppingCart shoppingCart = new Logic.ShoppingCart()
                 {
-                    ProductName = txtProductName.Text;
-                    ProductImage = "~/ProductImages/" + uploadProductImage.FileName;
-                    ProductPrice = txtProductPrice.Text;
-                    ProductDescription = txtProductDescription.Text;
-                    CategoryId = Convert.ToInt32(categoryDropDownList.SelectedValue);
+                    ProductName = txtProductName.Text,
+                    ProductImage = "~/ProductImages/" + uploadProductImage.FileName,
+                    ProductPrice = txtProductPrice.Text,
+                    ProductDescritpion = txtProductDescription.Text,
+                    CategoryId = Convert.ToInt32(categoryDropDownList.SelectedValue),
                 };
 
-                ShoppingCart.AddNewProduct();
+                shoppingCart.AddNewProduct(shoppingCart);
                 
                 ClearText();
             }

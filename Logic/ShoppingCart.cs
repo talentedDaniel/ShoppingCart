@@ -9,14 +9,14 @@ namespace ShoppingCart.Logic
 {
     public class ShoppingCart
     {
-        public string CategoryName;
-        public int CategoryId;
+        public string CategoryName { set; get; }
+        public int CategoryId { set; get; }
 
-        public string ProductName;
-        public string ProductPrice;
-        public string ProdcutImage;
-        public string ProductDescritpion;
-        public string ProductIngredient;
+        public string ProductName { set; get; }
+        public string ProductPrice { set; get; }
+        public string ProductImage { set; get; }
+        public string ProductDescritpion { set; get; }
+        public string ProductIngredient { set; get; }
 
         // Generate categoryId for primary key
         public int GetCategoryId()
@@ -36,23 +36,25 @@ namespace ShoppingCart.Logic
             return dt;
         }
 
-        public void AddNewCategory()
+        public DataTable GetAllProducts()
         {
             SqlParameter[] parameters = new SqlParameter[1];
-            parameters[0] = DbAccess.DataAccess.AddParameter("@CategoryName", CategoryName, System.Data.SqlDbType.VarChar, 500);
-            DataTable dt = DbAccess.DataAccess.ExecuteDbByProcedure("SP_AddNewCategory", parameters);
+            parameters[0] = DbAccess.DataAccess.AddParameter("@CategoryID", CategoryId, System.Data.SqlDbType.Int, 20);
+            DataTable dt = DbAccess.DataAccess.ExecuteDbByProcedure("SP_GetAllProducts", parameters);
+
+            return dt;
         }
 
-        public void AddNewProduct()
+        public void AddNewCategory(ShoppingCart s)
         {
-            SqlParameter[] parameters = new SqlParameter[5];
-            parameters[0] = DbAccess.DataAccess.AddParameter("@ProductName", ProductName, System.Data.SqlDbType.VarChar, 500);
-            parameters[1] = DbAccess.DataAccess.AddParameter("@ProductPrice", ProductPrice, System.Data.SqlDbType.Int, 100);
-            parameters[2] = DbAccess.DataAccess.AddParameter("@ProductImage", ProdcutImage, System.Data.SqlDbType.VarChar, 500);
-            parameters[3] = DbAccess.DataAccess.AddParameter("@ProductDescritpion", ProductDescritpion, System.Data.SqlDbType.VarChar, 500);
-            parameters[4] = DbAccess.DataAccess.AddParameter("@CategoryId", CategoryId, System.Data.SqlDbType.Int, 100);
+            int categoryId = GetCategoryId();
+            DbAccess.DataAccess.InsertValueToCategory(categoryId, s);
+        }
 
-            DataTable dt = DbAccess.DataAccess.ExecuteDbByProcedure("SP_AddNewProduct", parameters);
+        public void AddNewProduct(ShoppingCart s)
+        {
+            int productId = GetCategoryId();
+            DbAccess.DataAccess.InsertValueToProduct(productId, s);
         }
 /*
         public string[] GetAllCategory()
@@ -62,6 +64,6 @@ namespace ShoppingCart.Logic
         public System.Collections.Generic.List GetAllProduct()
         {
         }
-*/
+ */
     }
 }

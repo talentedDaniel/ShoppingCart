@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using ShoppingCart.Logic;
 
 namespace ShoppingCart.Admin
 {
@@ -17,11 +11,11 @@ namespace ShoppingCart.Admin
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            ShoppingCart s = new ShoppingCart
+            Logic.ShoppingCart s = new Logic.ShoppingCart
             {
-                CategoryName = txtCategoryName.Text;
+                CategoryName = txtCategoryName.Text
             };
-            s.AddNewCategory();
+            s.AddNewCategory(s);
             txtCategoryName.Text = string.Empty;
             Response.Redirect("~/Admin/AddNewProduct.aspx");
         }

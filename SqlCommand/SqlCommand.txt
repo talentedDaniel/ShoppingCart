@@ -15,6 +15,32 @@ CategoryID int primary key identity(1,1),
 CategoryName varchar(500)
 )
 
+Create table Customer
+(
+CustomerID int primary key identity (1,1),
+Name varchar(1000),
+Password varchar(5000),
+Email varchar(1000)
+)
+
+Create table Order
+(
+OrderID int primary key identity(1,1),
+Email varchar(500),
+ProductID int
+)
+
+Create table Guest
+(
+GuestID int primary key identity (1,1),
+Email varchar(1000)
+)
+
+
+
+
+
+
 //Using SQL Procdure to replace SLQ clause in C# code.
 
 SQL Procedure
@@ -100,3 +126,84 @@ GO
 
 
 
+
+USE [ShoppingCartDB]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+CREATE PROCEDURE [dbo].[SP_GetAllProducts] (@CategoryID INT)
+
+AS
+	BEGIN
+
+		BEGIN TRY
+			IF(@CategoryID <> 0)
+				BEGIN
+					SELECT *
+					FROM (SELECT P.CategoryID,
+								 P.ProductID,
+								 P.Name,
+								 P.Price,
+								 P.ImageUrl,
+								 C.CategoryName,
+								 P.ProductQuantity,
+								 Isnull(Sum(CP.TotalProduct), 0) AS ProductSold,
+								 (P.ProductQuantity	IsNull(Sumb(CP.TotalProduct), 0)) AS AvailableStock
+						   FROM	 Product P
+								 INNER JOIN Category C
+									ON C.CategoryID = P.CategoryID
+								 LEFT JOIN CustomerProduct CP
+									ON CP.ProductID = P.ProductID
+						   GROUP BY P.ProductID,
+									P.Name,
+									P.Price,
+									P.ImageUrl,
+									C.CategoryName,
+									P.ProductQuantity,
+									P.CategoryID) StockTable
+					WHERE	AvailableStock > 0
+							AND CategoryID = @CategoryID
+					)
+				END
+				ELSE
+					BEGIN
+						SELECT *
+						FROM (SELECT P.CategoryID,
+									 P.ProductID,
+									 P.Name,
+									 P.Price,
+									 P.ImageUrl,
+									 C.CategoryName,
+									 P.ProductQuantity,
+									 Isnull(Sum(CP.TotalProduct), 0) AS ProductSold,
+									 (P.ProductQuantity	IsNull(Sumb(CP.TotalProduct), 0)) AS AvailableStock
+							   FROM	 Product P
+									 INNER JOIN Category C
+										ON C.CategoryID = P.CategoryID
+									 LEFT JOIN CustomerProduct CP
+										ON CP.ProductID = P.ProductID
+							   GROUP BY P.ProductID,
+										P.Name,
+										P.Price,
+										P.ImageUrl,
+										C.CategoryName,
+										P.ProductQuantity,
+										P.CategoryID) StockTable
+						WHERE	AvailableStock > 0
+						)
+
+						END
+				END	
+		END TRY
+		BEGIN CATCH
+		 PRINT('Error occurred')
+		END CATCH
+END
+GO
